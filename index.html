@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row pt-5">
+        <div class="col-3">
+          <div
+            class="nav flex-column nav-pills nav-edit"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <button
+              class="nav-link active"
+              id="bt1-tab"
+              data-toggle="pill"
+              data-target="#bt1"
+              type="button"
+              role="tab"
+              aria-controls="bt1"
+              aria-selected="true"
+            >
+              Bài tập 1
+            </button>
+            <button
+              class="nav-link"
+              id="bt2-tab"
+              data-toggle="pill"
+              data-target="#bt2"
+              type="button"
+              role="tab"
+              aria-controls="bt2"
+              aria-selected="false"
+            >
+              Bài tập 2
+            </button>
+            <button
+              class="nav-link"
+              id="bt3-tab"
+              data-toggle="pill"
+              data-target="#bt3"
+              type="button"
+              role="tab"
+              aria-controls="bt3"
+              aria-selected="false"
+            >
+              Bài tập 3
+            </button>
+            <button
+              class="nav-link"
+              id="bt4-tab"
+              data-toggle="pill"
+              data-target="#bt4"
+              type="button"
+              role="tab"
+              aria-controls="bt4"
+              aria-selected="false"
+            >
+              Bài tập 4
+            </button>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="bt1"
+              role="tabpanel"
+              aria-labelledby="bt1-tab"
+            >
+              <h1>Quản lý tuyển sinh</h1>
+
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="scoreBenchmark"
+                  id="scoreBenchmark"
+                  class="form-control"
+                  placeholder="Nhập vào số điểm chuẩn"
+                />
+              </div>
+              <h6>Nhập điểm số sinh viên</h6>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="scoreOne"
+                  id="scoreOne"
+                  class="form-control"
+                  placeholder="Nhập vào điểm môn thứ nhất"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="scoreTwo"
+                  id="scoreTwo"
+                  class="form-control"
+                  placeholder="Nhập vào điểm môn thứ hai"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="scoreThree"
+                  id="scoreThree"
+                  class="form-control"
+                  placeholder="Nhập vào điểm môn thứ ba"
+                />
+              </div>
+              <div class="form-group">
+                <label for="area">Chọn khu vực ưa tiên</label>
+                <select class="form-control" name="area" id="area">
+                  <option value="X">Khu vực không ưa tiên (X)</option>
+                  <option value="A">Khu vực ưa tiên A</option>
+                  <option value="B">Khu vực ưa tiên B</option>
+                  <option value="c">Khu vực ưa tiên C</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="person">Chọn đối tượng ưa tiên</label>
+                <select class="form-control" name="person" id="person">
+                  <option value="0">Khổng phải đối tượng ưa tiên (0)</option>
+                  <option value="1">Đối tượng ưa tiên 1</option>
+                  <option value="2">Đối tượng ưa tiên 2</option>
+                  <option value="3">Đối tượng ưa tiên 3</option>
+                </select>
+              </div>
+              <button class="btn btn-success" id="hanldeClassificate">
+                Kết quả
+              </button>
+              <div id="classificateResult"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bt2"
+              role="tabpanel"
+              aria-labelledby="bt2-tab"
+            >
+              <h1>Tính tiền điện</h1>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="personOnHouse"
+                  id="personOnHouse"
+                  class="form-control"
+                  placeholder="Nhập tên người dùng điện"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="numberKW"
+                  id="numberKW"
+                  class="form-control"
+                  placeholder="Nhập vào số KW"
+                />
+              </div>
+              <button class="btn btn-success mt-3" id="hanldeElectronicMoney">
+                Tính tiền điện
+              </button>
+              <div id="electronicMoneyResult"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bt3"
+              role="tabpanel"
+              aria-labelledby="bt3-tab"
+            >
+              <h1>Tính thuế thu nhập cá nhân</h1>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="personTax"
+                  id="personTax"
+                  class="form-control"
+                  placeholder="Nhập vào họ và tên người nộp thuế"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="income"
+                  id="income"
+                  class="form-control"
+                  placeholder="Nhập vào tổng số thu nhập của năm"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="personDependent"
+                  id="personDependent"
+                  class="form-control"
+                  placeholder="Nhập vào số người phụ thuộc"
+                />
+              </div>
+              <button class="btn btn-success" id="hanldeTax">Tính thuế</button>
+              <div id="taxResult"></div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bt4"
+              role="tabpanel"
+              aria-labelledby="bt4-tab"
+            >
+              <h1>Tính tiền cáp</h1>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="codeCustomer"
+                  id="codeCustomer"
+                  class="form-control"
+                  placeholder="Nhập vào mã khách hàng"
+                />
+              </div>
+              <div class="form-group">
+                <label for="typeCustomer">Chọn loại khách hàng</label>
+                <select
+                  class="form-control"
+                  name="typeCustomer"
+                  id="typeCustomer"
+                >
+                  <option value="O">Chọn loại khách hàng</option>
+                  <option value="ND">Nhà Dân</option>
+                  <option value="DN">Doanh Nghiệp</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="cableNumber"
+                  id="cableNumber"
+                  class="form-control"
+                  placeholder="Nhập vào số kênh cao cấp"
+                />
+              </div>
+              <div class="form-group isNoneDisplay" id="connectNumberForm">
+                <input
+                  type="number"
+                  name="connectNumber"
+                  id="connectNumber"
+                  class="form-control"
+                  placeholder="Nhập vào số kết nối"
+                />
+              </div>
+              <button class="btn btn-success" id="hanldeCableMoney">
+                Tính tiền cáp
+              </button>
+              <div id="cableMoneyResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- MAIN JS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
